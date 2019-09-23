@@ -14,12 +14,20 @@
 
 int		get_next_line(const int fd, char **line)
 {
-	char	buf[BUFF_SIZE];
-	char	*tmp;
+	char 	buf[BUFF_SIZE];
+	char 	*tmp;
+	char	*new;
+	int		var;
+	size_t	len;
 
-	tmp = ft_strnew(0);
+	new = ft_strnew(0);
+	len = ft_strlen(new);
 	while (ret = read(fd, buf, BUFF_SIZE))
-		while (buf:
+	{
+		new = ft_strsub(buf, 0, ret);
+		f_lend(&new);
 		tmp = ft_strjoin(tmp, buf);
-
-
+		line = &tmp;
+		return (1);
+	}
+}
